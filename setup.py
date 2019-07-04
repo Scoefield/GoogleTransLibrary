@@ -39,7 +39,7 @@ def install():
         name='google_trans',
         version=get_version(),
         description=get_description(),
-        long_description=get_readme(),
+        long_description="google translation for python",
         long_description_content_type="text/markdown",
         license='MIT',
         author='scoefield',
