@@ -17,14 +17,14 @@ def get_file(*paths):
 
 
 def get_version():
-    init_py = get_file(os.path.dirname(__file__), 'trans', '__init__.py')
+    init_py = get_file(os.path.dirname(__file__), 'google_trans', '__init__.py')
     pattern = r"{0}\W*=\W*'([^']+)'".format('__version__')
     version, = re.findall(pattern, init_py)
     return version
 
 
 def get_description():
-    init_py = get_file(os.path.dirname(__file__), 'baidu_trans', '__init__.py')
+    init_py = get_file(os.path.dirname(__file__), 'google_trans', '__init__.py')
     pattern = r'"""(.*?)"""'
     description, = re.findall(pattern, init_py, re.DOTALL)
     return description
@@ -36,7 +36,7 @@ def get_readme():
 
 def install():
     setup(
-        name='baidu_trans',
+        name='google_trans',
         version=get_version(),
         description=get_description(),
         long_description=get_readme(),
@@ -44,7 +44,7 @@ def install():
         license='MIT',
         author='scoefield',
         author_email='scoefielddeng' '@' 'gmail.com',
-        url='https://github.com/Scoefield/PythonLearning',
+        url='https://github.com/Scoefield/GoogleTransLibrary',
         classifiers=['Development Status :: 5 - Production/Stable',
                      'Intended Audience :: Education',
                      'Intended Audience :: End Users/Desktop',
@@ -57,7 +57,7 @@ def install():
                      'Programming Language :: Python :: 3.5',
                      'Programming Language :: Python :: 3.6'],
         packages=find_packages(exclude=['docs']),
-        keywords='baidu translate translator',
+        keywords='google translate translator',
     )
 
 
