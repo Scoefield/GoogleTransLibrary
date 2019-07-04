@@ -1,4 +1,4 @@
-# google_trans: Free baidu translate API for Python
+# google_trans: Free google translate third-party for Python
 
 python 3.4+ 
 python 2.7+
